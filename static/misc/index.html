@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>celesta.gq | Misc |</title>
+    <link rel="stylesheet" href="index1.css">
+    <link rel="icon" type="image/x-icon" href="/uv.png">
+    
+</head>
+<body>
+    <nav class="navbar">
+      <a href="../"><button><img src="../img/home.png" width="40" height="40"></button></a>
+      <a href=""><button><img src="../img/settings.png" width="40" height="40"></button></a    
+      <a href="https://discord.gg/r2xGDjDak4"><button><img src="../img/discord.png" width="40" height="40"></button></a>
+        <a href="https://github.com/techarb2"><button><img src="../img/github.webp" width="40" height="40"></button></a>
+                                                                                          
+    </nav>
+
+      <div>
+
+        <div class="console-container">
+      <div class="console">
+        <h1>about:blank</h1>
+        <div class="consolebody">
+          <p>Enter a URL you want to be opened in a about:blank page below:</p>
+          <p class="console-input"><input id="url-target" value="" autocomplete="on" type="text" autofocus /></p>
+          <p>Please make sure you have the https:// on the URL, it is best to just copy the link from the actual search bar!</p>
+        </div>
+      </div>
+      <div class="button-wrapper">
+        <button id="create" class="console-button">Create page</button>
+        <button class="console-button" onclick="document.getElementById('url-target').value = ''">Clear input</button>
+      </div>
+      
+    </div>
+    <script>
+      var url = document.getElementById("url-target");
+      var urlObj = new window.URL(window.location.href);
+      document.getElementById("create").onclick = function () {
+        if (url.value.substring(0, 8) !== 'https://' && url.value.substring(0, 7) !== 'http://') {
+    		url.value = 'https://' + url.value.split('https://').pop();
+        } else if (url.value.substring(0, 7) == 'http://'){
+        	url.value = 'https://' + url.value.split('http://').pop();
+        };
+        win = window.open();
+        win.document.body.style.margin = "0";
+        win.document.body.style.height = "100vh";
+        var iframe = win.document.createElement("iframe");
+        iframe.style.border = "none";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.margin = "0";
+        iframe.referrerpolicy = "no-referrer";
+        iframe.allow = "fullscreen";
+        iframe.src = url.value;
+        win.document.body.appendChild(iframe);
+        var script = win.document.createElement("script");
+        script.src = "https://3kh0.github.io/js/main.js";
+        win.document.body.appendChild(script);
+      };
+    </script>
+        
+      <div> <h3>____________________________________________________________________________________________________________</h3> </div>
+    
+<div class="menu">
+    <h1>Other Proxys</h1>
+    <table border="0" cellpadding="5" cellspacing="5" class="table">
+        <tbody>
+            <tr>
+                <td align="center"><a href="https://mathiswaytofun.cf"><button><img src="../img/ingrainpxy.png" width="169" height="169"></button></a  </td>
+              <td align="center"><a href="https://hypertabs.cc"><button><img src="../img/hypertabs.png" width="169" height="169"></button></a></td>
+           <td align="center"><a  href="https://kcps.pw/"><button><img src="../img/holyunblocker.png" width="169" height="169"></button></a  </td>
+                         <td align="center"><a  href="https://thefinalsolution.xyz/"><button><img src="../img/holyunblocker.png" width="169" height="169"></button></a  </td>
+                         <td align="center"><a  href="https://touchgrass.cloud/"><button><img src="../img/holyunblocker.png" width="169" height="169"></button></a  </td>
+</div>
+  <div>
+      
+  </div>
+</body>
+</html>
+</div>
+</body>
+</html>
